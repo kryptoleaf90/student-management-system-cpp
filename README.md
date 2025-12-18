@@ -3,8 +3,5 @@ This project is a basic attempt to manage student records through a text-based i
  Features so far:
 - Add new student records
 - Display all student records
-- Search for a student by roll number
-- Update existing student details
-- Delete student records
-- Menu-driven interface for easier navigation
+
 
