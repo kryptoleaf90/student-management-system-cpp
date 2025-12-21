@@ -8,29 +8,30 @@ struct smc{
     float marks;
 };
 int main(){
+    vector<smc>student;
     int n;
 cout<<"enter number of students: ";
 cin>>n;
-struct smc s[n];
 for(int i=0;i<n;i++){
+    smc s;
     cout<<"enter name of student: ";
-    cin>>s[i].name;
+    cin>>s.name;
     cout<<"enter sem: ";
-    cin>>s[i].sem;
+    cin>>s.sem;
     cout<<"enter UID: ";
-    cin>>s[i].uid;
+    cin>>s.uid;
     cout<<"enter department: ";
-    cin>>s[i].dep;
+    cin>>s.dep;
     cout<<"enter marks: ";
-    cin>>s[i].marks;
+    cin>>s.marks;
+    student.push_back(s);
 }
 cout<<"   ---STUDENT DETAILS---   "<<'\n';
-for(int i=0;i<n;i++){
-    cout<<"student "<<i<<":";
-    cout<<"name: "<<s[i].name<<'\n';
-    cout<<"sem: "<<s[i].sem<<'\n';
-    cout<<"UID: "<<s[i].uid<<'\n';
-    cout<<"department: "<<s[i].dep<<'\n';
-    cout<<"MARKS obtained: "<<s[i].marks<<'\n';
+for(auto& s:student){
+    cout<<"Name: "<<s.name<<'\n';
+    cout<<"Sem: "<<s.sem<<'\n';
+    cout<<"Uid: "<<s.uid<<'\n';
+    cout<<"Dep: "<<s.dep<<'\n';
+    cout<<"Marks: "<<s.marks<<'\n';
 }
 }
